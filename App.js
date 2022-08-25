@@ -29,7 +29,11 @@ function App() {
 	const [b, setB] = useState(0); // определили начальное значение и тип
  
 	const formHandler = (event) => {
-	  event.preventDefault();
+	  event.preventDefault(); 
+		//если в форме нажать кнопку то загружается страница указанная в атрибуте action формы. 
+		//Если такого атрибута нет то перезагружается страница. 
+		//Єтот механизм (event.preventDefault()) позволяет обрабатывать формы в php, python без JS. 
+		//Мы отключаем подобное обновление страницы
 	  setA(+event.target.elements.num1.value);
 	  setB(+event.target.elements.num2.value);
 	}
